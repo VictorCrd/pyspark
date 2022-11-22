@@ -29,11 +29,11 @@ ARG PYSPARK_VERSION=3.3.1
 
 RUN pip --no-cache-dir install pyspark==${PYSPARK_VERSION}
 
-COPY main.py ./
-
 RUN chmod -R 755 $APP_HOME
 RUN chown default:default $APP_HOME
 
 USER default
+
+EXPOSE 0.0.0.0:4040
 
 CMD ["bash"]
