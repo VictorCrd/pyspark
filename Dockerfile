@@ -34,6 +34,10 @@ RUN chown default:default $APP_HOME
 
 USER default
 
-EXPOSE 0.0.0.0:4040
+EXPOSE 4040
+
+# https://dev.to/mvillarrealb/creating-a-spark-standalone-cluster-with-docker-and-docker-compose-2021-update-6l4
+
+#ENV SPARK_HOME=./opt/spark
 
 CMD ["bash"]
